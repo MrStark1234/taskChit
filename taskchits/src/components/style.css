@@ -2,4 +2,7 @@
   #add-btn {
     left: 41%;
   }
+  #title {
+    width: fit-content;
+  }
 }

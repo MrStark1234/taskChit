@@ -46,7 +46,10 @@ const Foreground = () => {
         ref={ref}
         className="fixed z-[3] top-0 left-0 w-full h-screen flex flex-wrap gap-10 p-10"
       >
-        <h1 className="absolute top-1/2 left-1/2 -translate-x-[50%] text-sky-950 text-[9vw] leading-none tracking-tighter font-semibold ">
+        <h1
+          id="title"
+          className="absolute top-1/2 left-1/2 -translate-x-[50%] text-sky-950 text-[9vw] leading-none tracking-tighter font-semibold "
+        >
           TASK-CHITS.
         </h1>
         <button
