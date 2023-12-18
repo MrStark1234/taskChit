@@ -11,11 +11,14 @@ const Card = ({ data, reference, post, setpost }) => {
       // Use the actual post ID from the data prop
       const postId = data._id;
 
-      await axios.delete(`http://localhost:8000/posts/deletePost/${postId}`, {
-        headers: {
-          token: localStorage.getItem("token"),
-        },
-      });
+      await axios.delete(
+        `https://taskchit-server.onrender.com/posts/deletePost/${postId}`,
+        {
+          headers: {
+            token: localStorage.getItem("token"),
+          },
+        }
+      );
 
       // Update the state by removing the deleted post
       const newPosts = post.filter((e) => e._id !== postId);

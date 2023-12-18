@@ -10,11 +10,14 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/auth/register", {
-        username,
-        password,
-        email,
-      });
+      const response = await axios.post(
+        "https://taskchit-server.onrender.com/auth/register",
+        {
+          username,
+          password,
+          email,
+        }
+      );
 
       const token = response.data.token;
 
