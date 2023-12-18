@@ -38,10 +38,8 @@ const AddChit = () => {
         }
       );
 
-      // Handle the response, e.g., show a success message
       console.log("Chit added successfully:", response.data);
 
-      // Optionally, you can reset the form values after a successful submission
       setFormValues({
         desc: "",
         fileSize: "",
@@ -54,7 +52,6 @@ const AddChit = () => {
       });
       navigate("/home");
     } catch (error) {
-      // Handle the error, e.g., show an error message
       console.error("Error adding chit:", error.message);
     }
   };

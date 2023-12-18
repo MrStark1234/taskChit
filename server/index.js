@@ -3,7 +3,7 @@ const app = express();
 var cors = require("cors");
 // const dotenv = require("dotenv");
 const authRoutes = require("./routes/auth");
-const postRoutes = require("./Controllers/postController");
+const postRoutes = require("./routes/postRoutes");
 
 const port = 8000;
 app.use(cors());

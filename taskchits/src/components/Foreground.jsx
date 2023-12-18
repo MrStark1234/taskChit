@@ -33,6 +33,7 @@ const Foreground = () => {
     // Navigate to the AddChit component
     navigate("/add");
   };
+
   const handleLogout = () => {
     localStorage.removeItem("token");
 
@@ -45,6 +46,9 @@ const Foreground = () => {
         ref={ref}
         className="fixed z-[3] top-0 left-0 w-full h-screen flex flex-wrap gap-10 p-10"
       >
+        <h1 className="absolute top-1/2 left-1/2 -translate-x-[50%] text-sky-950 text-[9vw] leading-none tracking-tighter font-semibold ">
+          TASK-CHITS.
+        </h1>
         <button
           id="add-btn"
           className=" bg-sky-800 text-white absolute w-[65px] h-[30px] rounded right-[8%] top-[2%] text-xs"

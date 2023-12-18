@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import axios from "axios";
 
 const Card = ({ data, reference, post, setpost }) => {
-  let postID = "657dc9b26e3575a8bb21ff89";
   const handleDeleteClick = async () => {
     try {
       // Use the actual post ID from the data prop
@@ -25,6 +24,7 @@ const Card = ({ data, reference, post, setpost }) => {
       console.error("Error deleting post:", error);
     }
   };
+
   return (
     <motion.div
       drag
@@ -32,22 +32,22 @@ const Card = ({ data, reference, post, setpost }) => {
       whileDrag={{ scale: 1.2 }}
       dragElastic={0.1}
       dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-      className="flex-shrink-0 relative w-60 h-72 rounded-[50px] bg-sky-900/90  py-10 px-5 text-orange-500 overflow-hidden "
+      className="flex-shrink-0 relative w-52 h-64 rounded-[50px] bg-sky-900/90  py-10 px-5 text-orange-500 overflow-hidden "
     >
       <span
-        className="w-5 h-5 rounded-full flex items-center justify-center bg-orange-500 float-right cursor-pointer"
+        className="w-4 h-4 rounded-full flex items-center justify-center bg-orange-500 float-right cursor-pointer"
         onClick={handleDeleteClick}
       >
-        <IoClose size=".7em" color="#000" />
+        <IoClose size=".6em" color="#000" />
       </span>
       <FaFileAlt />
 
-      <p className="mt-3 text-sm leading-tight text-zinc-300">{data.desc}</p>
+      <p className="mt-4 text-sm leading-tight text-zinc-300">{data.desc}</p>
       <div className="footer absolute bottom-0  w-full  left-0">
         <motion.div className="flex items-center justify-between mb-2 py-2 px-8">
           <p className="text-xs text-orange-500">{data.fileSize}</p>
-          <span className="w-6 h-6 rounded-full flex items-center justify-center bg-orange-500">
-            <GrDocumentUpdate size=".7em" color="#000" />
+          <span className="w-5 h-5 rounded-full flex items-center justify-center bg-orange-500">
+            <GrDocumentUpdate size=".6em" color="#000" />
           </span>
         </motion.div>
         {data.tag.isOpen ? (
