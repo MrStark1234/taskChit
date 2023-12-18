@@ -3,6 +3,12 @@
     left: 41%;
   }
   #title {
-    width: fit-content;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 350px) {
+  #title {
+    font-size: 25px;
   }
 }

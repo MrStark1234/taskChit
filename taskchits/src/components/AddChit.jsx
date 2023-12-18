@@ -69,7 +69,7 @@ const AddChit = () => {
             value={desc}
             name="desc"
             onChange={handleChange}
-            className="form-control w-96"
+            className="form-control"
             id="chitDescription"
             placeholder="Your Chit here.."
           />
