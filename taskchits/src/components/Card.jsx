@@ -4,6 +4,7 @@ import { GrDocumentUpdate } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
 import axios from "axios";
+import "./style.css";
 
 const Card = ({ data, reference, post, setpost }) => {
   const handleDeleteClick = async () => {
@@ -35,6 +36,7 @@ const Card = ({ data, reference, post, setpost }) => {
       whileDrag={{ scale: 1.2 }}
       dragElastic={0.1}
       dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+      id="card"
       className="flex-shrink-0 relative w-52 h-64 rounded-[50px] bg-sky-900/90  py-10 px-5 text-orange-500 overflow-hidden "
     >
       <span
